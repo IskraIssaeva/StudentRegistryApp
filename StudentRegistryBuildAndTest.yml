@@ -30,14 +30,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-
-    - name: Install dependencies
-        run: npm install
-
-      - name: Start application in the background
-        run: |
-          npm start &
-          npx wait-on http://localhost:8080
-
-      - name: Run tests
-        run: npm test
+    - run: npm install
+    - run: npm start &
+    - run: npm test
