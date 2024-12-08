@@ -15,7 +15,7 @@ let port = process.argv[2];
 if (!port) port = process.env['PORT'];
 if (!port) port = 8080;
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log(`App started. Listening at http://localhost:${port}`);
 })
 .on('error', function(err) {
