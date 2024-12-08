@@ -7,5 +7,6 @@ suite('About page', function() {
     let body = await res.text();
     assert.ok(body.includes("<title>About</title>"));
     assert.ok(body.includes("<h1>About</h1>"));
+    //comment
   });
 });
